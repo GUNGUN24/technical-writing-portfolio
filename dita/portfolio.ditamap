@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map xml:lang="en-US">
+  <title>Technical Writing Portfolio: DITA Samples</title>
+  <topicref href="authority-to-operate-overview.dita" type="concept"/>
+  <topicref href="create-flow-critical-incidents.dita" type="task"/>
+</map>
