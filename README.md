@@ -14,7 +14,7 @@ The DITA topics are organized in a [DITA map](dita/portfolio.ditamap).
 
 ## How I worked on each sample
 
-**Critical incident flow (task topic).** I built and tested this flow in a ServiceNow Personal Developer Instance, then wrote the procedure from my own run-through. I followed one-action-per-step rules, added step results only where the screen changes, and put prerequisites and required roles before step 1.
+**Critical incident flow (task topic).** I wrote this procedure for ServiceNow administrators who need to build a record-triggered flow in Workflow Studio. I followed one-action-per-step rules, added step results only where the screen changes, and put prerequisites and required roles before step 1.
 
 **Authority to Operate (concept topic).** I write about ATOs and the Risk Management Framework in my current role. This topic explains the concept for someone new to federal IT, leading with what an ATO is and why it matters before walking through the seven RMF steps.
 
