@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create-flow-critical-incidents" xml:lang="en-US">
+  <title>Create a flow that notifies a team about critical incidents</title>
+  <shortdesc>Build a flow in Workflow Studio that sends an email to the assignment group whenever someone creates an incident with a priority of 1 - Critical.</shortdesc>
+  <prolog>
+    <metadata>
+      <audience type="administrator" experiencelevel="novice"/>
+      <keywords>
+        <keyword>Flow Designer</keyword>
+        <keyword>Workflow Studio</keyword>
+        <keyword>incident</keyword>
+        <keyword>notification</keyword>
+      </keywords>
+    </metadata>
+  </prolog>
+  <taskbody>
+    <prereq>
+      <ul>
+        <li>Role required: admin or flow_designer.</li>
+        <li>The assignment group that should receive the email must have a group email address or at least one member with an email address.</li>
+      </ul>
+    </prereq>
+    <context>
+      <p>Critical incidents need attention within minutes. Without automation, the assigned team learns about a new critical incident only when someone checks the queue. A record-triggered flow removes that delay by sending the notification the moment the incident is created.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Navigate to <menucascade><uicontrol>All</uicontrol><uicontrol>Process Automation</uicontrol><uicontrol>Workflow Studio</uicontrol></menucascade>.</cmd>
+      </step>
+      <step>
+        <cmd>Select <menucascade><uicontrol>New</uicontrol><uicontrol>Flow</uicontrol></menucascade>.</cmd>
+      </step>
+      <step>
+        <cmd>On the flow properties form, fill in the fields.</cmd>
+        <info>
+          <table frame="all">
+            <tgroup cols="2">
+              <colspec colname="c1" colwidth="1*"/>
+              <colspec colname="c2" colwidth="2*"/>
+              <thead>
+                <row>
+                  <entry>Field</entry>
+                  <entry>Value</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry><uicontrol>Flow name</uicontrol></entry>
+                  <entry>Notify team of critical incidents</entry>
+                </row>
+                <row>
+                  <entry><uicontrol>Application</uicontrol></entry>
+                  <entry>Global</entry>
+                </row>
+                <row>
+                  <entry><uicontrol>Run As</uicontrol></entry>
+                  <entry>System User</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </info>
+      </step>
+      <step>
+        <cmd>Select <uicontrol>Build flow</uicontrol>.</cmd>
+        <stepresult>
+          <p>The flow editor opens with empty <uicontrol>Trigger</uicontrol> and <uicontrol>Actions</uicontrol> sections.</p>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Set the trigger.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Select <uicontrol>Add a trigger</uicontrol>, and then select <uicontrol>Created</uicontrol>.</cmd>
+          </substep>
+          <substep>
+            <cmd>In the <uicontrol>Table</uicontrol> field, select <userinput>Incident [incident]</userinput>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Add the condition <userinput>Priority is 1 - Critical</userinput>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Select <uicontrol>Done</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Add the email action.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Under <uicontrol>Actions</uicontrol>, select <menucascade><uicontrol>Add an Action, Flow Logic, or Subflow</uicontrol><uicontrol>Action</uicontrol></menucascade>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Search for and select <uicontrol>Send Email</uicontrol>.</cmd>
+          </substep>
+          <substep>
+            <cmd>In the <uicontrol>To</uicontrol> field, drag the <uicontrol>Assignment group</uicontrol> data pill from the trigger record.</cmd>
+          </substep>
+          <substep>
+            <cmd>In the <uicontrol>Subject</uicontrol> field, enter <userinput>Critical incident:</userinput> and then drag the <uicontrol>Number</uicontrol> data pill after the text.</cmd>
+          </substep>
+          <substep>
+            <cmd>In the <uicontrol>Body</uicontrol> field, add the <uicontrol>Short description</uicontrol> and <uicontrol>Caller</uicontrol> data pills.</cmd>
+          </substep>
+          <substep>
+            <cmd>Select <uicontrol>Done</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Select <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Test the flow before you activate it.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Select <uicontrol>Test</uicontrol>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Choose an existing incident with a priority of 1 - Critical, and then select <uicontrol>Run Test</uicontrol>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Open the execution details and confirm that each step shows a status of <systemoutput>Completed</systemoutput>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Select <uicontrol>Activate</uicontrol>.</cmd>
+        <stepresult>
+          <p>The flow status changes to <systemoutput>Active</systemoutput>.</p>
+        </stepresult>
+      </step>
+    </steps>
+    <result>
+      <p>Each new incident with a priority of 1 - Critical now sends an email to its assignment group.</p>
+    </result>
+    <postreq>
+      <p>To change who receives the email or what it says, deactivate the flow, edit the <uicontrol>Send Email</uicontrol> action, and then activate the flow again.</p>
+    </postreq>
+  </taskbody>
+</task>
