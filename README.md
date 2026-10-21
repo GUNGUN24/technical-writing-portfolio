@@ -1,6 +1,6 @@
 # Gungun: Technical Writing Portfolio
 
-I am a technical writer who explains enterprise IT, cloud, and cybersecurity topics to readers who need to act on them. My professional work is proprietary, so the samples below are original pieces written to show how I approach different content types.
+I am a technical writer who turns complex cloud, cybersecurity, and ServiceNow information into clear, structured content. My professional work is proprietary, so the samples below are original pieces written to show how I approach different content types.
 
 ## Samples
 
@@ -14,7 +14,7 @@ The DITA topics are organized in a [DITA map](dita/portfolio.ditamap).
 
 ## How I worked on each sample
 
-**Critical incident flow (task topic).** I wrote this procedure for ServiceNow administrators who need to build a record-triggered flow in Workflow Studio. I followed one-action-per-step rules, added step results only where the screen changes, and put prerequisites and required roles before step 1.
+**Critical incident flow (task topic).** I wrote this procedure for ServiceNow administrators who need to build a record-triggered flow in Workflow Studio, following the conventions of published ServiceNow product documentation. I followed one-action-per-step rules, added step results only where the screen changes, and put prerequisites and required roles before step 1.
 
 **Authority to Operate (concept topic).** I write about ATOs and the Risk Management Framework in my current role. This topic explains the concept for someone new to federal IT, leading with what an ATO is and why it matters before walking through the seven RMF steps.
 
