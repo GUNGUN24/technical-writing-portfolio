@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="authority-to-operate-overview" xml:lang="en-US">
+  <title>Authority to Operate (ATO) for federal information systems</title>
+  <shortdesc>An Authority to Operate (ATO) is the formal decision by a senior agency official to accept the security risk of running an information system. No federal system can go into production without one.</shortdesc>
+  <prolog>
+    <metadata>
+      <audience type="user" experiencelevel="novice"/>
+      <keywords>
+        <keyword>ATO</keyword>
+        <keyword>Risk Management Framework</keyword>
+        <keyword>NIST SP 800-37</keyword>
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+    <p>Every information system carries some risk. An ATO does not mean a system has no risk. It means an accountable official, called the authorizing official (AO), has reviewed the evidence and decided that the remaining risk is acceptable for the agency's mission.</p>
+    <section id="why-it-matters">
+      <title>Why an ATO matters</title>
+      <p>An ATO protects both the agency and the people whose data the system holds. Without one, a system cannot connect to agency networks or process government data. Losing an ATO can take a working system offline, so teams treat it as a continuing obligation rather than a one-time approval.</p>
+    </section>
+    <section id="how-it-works">
+      <title>How a system earns an ATO</title>
+      <p>Most agencies follow the Risk Management Framework (RMF) in NIST Special Publication 800-37. The RMF has seven steps:</p>
+      <ol>
+        <li><b>Prepare.</b> Set up roles, priorities, and the organization's risk strategy.</li>
+        <li><b>Categorize.</b> Rate the impact (low, moderate, or high) if the system's confidentiality, integrity, or availability were lost.</li>
+        <li><b>Select.</b> Choose security controls from NIST SP 800-53 that match that impact level.</li>
+        <li><b>Implement.</b> Put the controls in place and document how each one works.</li>
+        <li><b>Assess.</b> An independent assessor tests whether the controls work as described.</li>
+        <li><b>Authorize.</b> The AO reviews the authorization package and grants, or denies, the ATO.</li>
+        <li><b>Monitor.</b> The team tracks controls and changes continuously so the ATO stays valid.</li>
+      </ol>
+    </section>
+    <section id="package">
+      <title>What goes into an authorization package</title>
+      <p>The AO decides based on the authorization package, which usually contains three documents:</p>
+      <dl>
+        <dlentry>
+          <dt>System Security Plan (SSP)</dt>
+          <dd>Describes the system and explains how each selected control is implemented.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Security Assessment Report (SAR)</dt>
+          <dd>Records the assessor's test results, including any controls that failed.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Plan of Action and Milestones (POA&amp;M)</dt>
+          <dd>Lists each open weakness, who owns the fix, and when it is due.</dd>
+        </dlentry>
+      </dl>
+    </section>
+    <section id="related">
+      <title>Related terms</title>
+      <p>An <term>Interim Authority to Test (IATT)</term> allows limited testing before a full ATO. <term>Continuous monitoring</term> replaces the older model of reauthorizing every three years with ongoing checks.</p>
+    </section>
+  </conbody>
+</concept>
